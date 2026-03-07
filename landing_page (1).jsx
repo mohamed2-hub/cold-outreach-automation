@@ -1,0 +1,302 @@
+export default function LandingPage() {
+  const features = [
+    {
+      title: 'Spreadsheet-powered workflow',
+      text: 'Import leads directly from your spreadsheet and keep every contact organized in one simple system.',
+    },
+    {
+      title: 'AI personalization',
+      text: 'Generate short, natural cold emails using contact data like name, role, and company.',
+    },
+    {
+      title: 'Smart sending logic',
+      text: 'Use daily send limits, random delays, and duplicate prevention to keep outreach controlled.',
+    },
+    {
+      title: 'Automatic follow-ups',
+      text: 'Detect who has not replied and send timely follow-ups without manual tracking.',
+    },
+  ];
+
+  const stats = [
+    { value: '2', label: 'paying clients already' },
+    { value: '100%', label: 'automated outreach workflow' },
+    { value: 'Hours saved', label: 'every week from manual emailing' },
+  ];
+
+  const steps = [
+    'Pull contacts from a spreadsheet',
+    'Check send status and follow-up needs',
+    'Generate personalized email copy with AI',
+    'Send emails automatically with natural delays',
+    'Trigger follow-ups for non-replies',
+  ];
+
+  return (
+    <div className="min-h-screen bg-white text-slate-900">
+      <header className="sticky top-0 z-20 border-b border-slate-200/80 bg-white/85 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+          <div>
+            <div className="text-xl font-black tracking-tight">OutreachFlow AI</div>
+            <div className="text-xs text-slate-500">Cold email automation system</div>
+          </div>
+
+          <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
+            <a href="#features" className="transition hover:text-slate-600">Features</a>
+            <a href="#how-it-works" className="transition hover:text-slate-600">How it works</a>
+            <a href="#results" className="transition hover:text-slate-600">Results</a>
+          </nav>
+
+          <button className="rounded-2xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90">
+            Book a Demo
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-white to-white" />
+          <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-cyan-100 blur-3xl" />
+          <div className="absolute right-0 top-24 h-80 w-80 rounded-full bg-indigo-100 blur-3xl" />
+
+          <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28">
+            <div>
+              <div className="inline-flex items-center rounded-full border border-blue-200 bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-blue-700 shadow-sm">
+                Built for founders, agencies, and service businesses
+              </div>
+
+              <h1 className="mt-6 max-w-3xl text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl">
+                Automate cold outreach without sounding automated.
+              </h1>
+
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+                OutreachFlow AI handles your cold email process from spreadsheet to follow-up. It personalizes every message, avoids duplicate sends, adds natural delays, and keeps outreach controlled from start to finish.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <button className="rounded-2xl bg-slate-900 px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-slate-200 transition hover:-translate-y-0.5">
+                  Get This Automation
+                </button>
+                <button className="rounded-2xl border border-slate-300 px-6 py-3.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">
+                  See How It Works
+                </button>
+              </div>
+
+              <div className="mt-10 grid max-w-xl grid-cols-3 gap-4">
+                {stats.map((item) => (
+                  <div key={item.label} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                    <div className="text-3xl font-black tracking-tight text-slate-900">{item.value}</div>
+                    <div className="mt-1 text-sm text-slate-500">{item.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-2xl shadow-slate-200">
+                <div className="rounded-[1.75rem] bg-slate-950 p-6 text-white">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <div className="text-sm text-slate-400">Automation status</div>
+                      <div className="mt-2 text-3xl font-bold">Running outreach sequence</div>
+                    </div>
+                    <div className="rounded-full bg-emerald-400/15 px-3 py-1 text-sm font-semibold text-emerald-300">
+                      Active
+                    </div>
+                  </div>
+
+                  <div className="mt-8 space-y-4">
+                    <div className="rounded-2xl bg-white/5 p-4">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-300">Leads imported</span>
+                        <span className="font-semibold text-white">248</span>
+                      </div>
+                    </div>
+                    <div className="rounded-2xl bg-white/5 p-4">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-300">Emails sent today</span>
+                        <span className="font-semibold text-white">37 / 50</span>
+                      </div>
+                    </div>
+                    <div className="rounded-2xl bg-white/5 p-4">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-300">Pending follow-ups</span>
+                        <span className="font-semibold text-white">19</span>
+                      </div>
+                    </div>
+                    <div className="rounded-2xl bg-white/5 p-4">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-300">Next send delay</span>
+                        <span className="font-semibold text-white">2m 14s</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-slate-200 p-4">
+                    <div className="text-sm font-semibold">Duplicate prevention</div>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      The workflow checks contact history before every send so the same lead is never emailed twice by mistake.
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl border border-slate-200 p-4">
+                    <div className="text-sm font-semibold">Controlled delivery</div>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      Daily send limits and random wait times help keep outreach structured and more natural.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">Key features</p>
+            <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">
+              A practical cold email system built for real outreach
+            </h2>
+            <p className="mt-4 text-lg text-slate-600">
+              This automation removes repetitive tasks while keeping your outreach workflow organized, personalized, and easy to manage.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {features.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-lg">✦</div>
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="how-it-works" className="bg-slate-50 py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">How it works</p>
+                <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">
+                  From lead list to follow-up, fully automated
+                </h2>
+                <p className="mt-4 max-w-xl text-lg text-slate-600">
+                  The system is designed to handle the outreach workflow step by step, with simple logic that saves time and reduces manual work.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {steps.map((step, index) => (
+                  <div key={step} className="flex gap-4 rounded-[1.5rem] bg-white p-5 shadow-sm ring-1 ring-slate-200">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-slate-900 text-sm font-bold text-white">
+                      {index + 1}
+                    </div>
+                    <div className="pt-1 text-base font-medium text-slate-700">{step}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="results" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+          <div className="rounded-[2rem] bg-gradient-to-br from-slate-950 to-slate-800 px-8 py-12 text-white lg:px-12">
+            <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-300">Proof of value</p>
+                <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">
+                  Already sold to real clients
+                </h2>
+                <p className="mt-4 max-w-xl text-slate-300">
+                  This is not just a concept. The automation has already been sold to two clients, showing real demand for a streamlined cold outreach workflow.
+                </p>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-3">
+                {stats.map((item) => (
+                  <div key={item.label} className="rounded-[1.5rem] bg-white/10 p-6 backdrop-blur">
+                    <div className="text-4xl font-black">{item.value}</div>
+                    <div className="mt-2 text-sm text-slate-300">{item.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">Pricing</p>
+            <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">
+              Choose how you want to launch your outreach
+            </h2>
+            <p className="mt-4 text-lg text-slate-600">
+              Whether you want the automation ready to run instantly or prefer to install it yourself, you can start using the system in minutes and stop sending emails manually.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+
+            <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-lg">
+              <div className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">Automation Only</div>
+              <div className="mt-4 text-5xl font-black text-slate-900">$40</div>
+              <p className="mt-3 text-slate-600">
+                Get the cold outreach automation and plug it into your own workflow.
+              </p>
+
+              <ul className="mt-8 space-y-3 text-sm text-slate-600">
+                <li>✔ Complete cold email automation</li>
+                <li>✔ AI‑generated personalized emails</li>
+                <li>✔ Spreadsheet lead management</li>
+                <li>✔ Smart sending logic</li>
+                <li>✔ Random sending delays</li>
+                <li>✔ Automatic follow‑ups</li>
+              </ul>
+
+              <div className="mt-10">
+                <button className="w-full rounded-2xl border border-slate-900 px-6 py-3.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-900 hover:text-white">
+                  Get the Automation
+                </button>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border-2 border-slate-900 bg-white p-10 shadow-xl relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-slate-900 px-4 py-1 text-xs font-semibold text-white">
+                Most Popular
+              </div>
+
+              <div className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">Full Setup</div>
+              <div className="mt-4 text-5xl font-black text-slate-900">$60</div>
+              <p className="mt-3 text-slate-600">
+                I install and configure the entire automation for you so it’s ready to start sending outreach immediately.
+              </p>
+
+              <ul className="mt-8 space-y-3 text-sm text-slate-600">
+                <li>✔ Everything in Automation Only</li>
+                <li>✔ Complete system installation</li>
+                <li>✔ Spreadsheet setup</li>
+                <li>✔ Email sending configuration</li>
+                <li>✔ Workflow testing</li>
+                <li>✔ Ready‑to‑run outreach system</li>
+              </ul>
+
+              <div className="mt-10">
+                <button className="w-full rounded-2xl bg-slate-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:opacity-90">
+                  Get Full Setup
+                </button>
+                <p className="mt-3 text-xs text-slate-500 text-center">Best for founders who want to start outreach immediately.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
